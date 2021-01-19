@@ -1,27 +1,24 @@
-# Grant
+Załużmy że mamy testowy link do serwisu który aktualnie jest wyłączony jednak gdy tylko jego status się zmieni, chcemy do niego przesłać kilka innych linków (zgłoszeń ??)
+Dodatkowo chcemy, by nie powodować problemu na serwerze, by nasze linki były wysłane max dwukrotnie (!!)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+1) testowanie polega na puszczaniu requestow do serwera co okreslona ilosc opoznien (testowy URL)
+- opóźnienie requestów - slider dowolna zmiana
+2) opcje puszczenia:
+- req z automatu - gdy tylko status testowanych req sie zmieni = puszczamy "paczke - linki do zatwierdzenia"
+- puść o konkretnej godzinie (domyślnie app dodaje 5min)
+- możemy też wypuścić pliki manualnie - "wypuść linki"
+- tradycyjnie otworzyć zakładki dla każdego linku z osobna
+3) Status wskzuje czy obie próby zostały zrealizowane
 
-## Development server
+https://grant-mfs.azurewebsites.net
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+angular, angular material, RJXS
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+chrome CORS problem ? 
+...google
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Just do follow steps:
+Right click on desktop, add new shortcut.
+Add the target as "[PATH_TO_CHROME]\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp.
+Click OK.
